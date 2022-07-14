@@ -1,0 +1,25 @@
+<section class="">
+  <app-navbar></app-navbar>
+  <!-- Page Content -->
+  <main>
+    <div class="py-12">
+      <div class="flex items-center justify-center sm:rounded-lg">
+        <div class="flex flex-wrap items-center justify-center">
+          <app-loader *ngIf="loading"></app-loader>
+          <div
+            class="h-full bg-white m-0 flex flex-wrap items-center justify-center"
+            *ngIf="!loading"
+          >
+            <app-nominee-card
+              *ngFor="let item of nominees"
+              [nominee]="item"
+            ></app-nominee-card>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <p *ngFor="let item of votes$ | async">
+      {{ item.voteId }}, {{ item.code }}, {{ item.votes }}
+    </p> -->
+  </main>
+</section>
