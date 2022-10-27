@@ -93,8 +93,8 @@ export class CheckoutComponent implements OnInit {
     };
 
     const body = {
-      // amount: this.checkoutForm.value.votes * 100,
-      amount: 0.01 * 100,
+      amount: this.checkoutForm.value.votes * 200,
+      // amount: 0.01 * 100,
       clientId: this.clientTransactionId,
       votingDetails: votingDetails,
     };
